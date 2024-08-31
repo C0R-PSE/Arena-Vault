@@ -191,7 +191,7 @@ export async function historyMove(input) {
             document.querySelector('#trade-button-forward').classList.remove('disabled')
         )
     }
-    //console.log(targetItemsHistory)
+    //console.log(targetItemsHistory) 
 }
 
 export async function itemListClick(itemName) {
