@@ -216,7 +216,6 @@ export async function buildItem(item) {
 
     // item name element
     var itemName = document.createElement('div')
-    console.log('123abc')
     if (item.shortName.length > 0) {
         itemName.innerHTML = item.shortName
     } else {
