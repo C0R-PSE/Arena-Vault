@@ -42,13 +42,14 @@ function contentWidthCheck() {
 }
 export var tooltip = document.getElementById('custom-tooltip');
 var widthCheck = contentWidthCheck()
-
-window.onresize = () => { widthCheck = contentWidthCheck() }
+var wWidth = window.innerWidth
+window.onresize = () => { widthCheck = contentWidthCheck(); wWidth = window.innerWidth }
 function tooltipMove(event) {
   var x = event.clientX,
       y = event.clientY;
   tooltip.style.top = (y - 17) + 'px';
-  if (x + tooltip.offsetWidth + 5 < widthCheck || tooltip.hasAttribute('unchecked')) {
+  //if (x + tooltip.offsetWidth + 5 < widthCheck || tooltip.hasAttribute('unchecked')) {
+  if (x + tooltip.offsetWidth + 5 < wWidth) {
     tooltip.style.left = (x + 5) + 'px';
   } else {
     tooltip.style.left = (x - 5 - tooltip.offsetWidth) + 'px';
