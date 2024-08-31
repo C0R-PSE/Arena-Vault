@@ -1,7 +1,7 @@
 {
     "T85 SMG" : [
         {
-            "trader" : "joel garrison",
+            "trader" : "Joel Garrison",
             "ingredients" : [
                 {
                     "name" : "safety cord",
@@ -17,7 +17,7 @@
     ],
     "MAC-10 SMG" : [
         {
-            "trader" : "joel garrison",
+            "trader" : "Joel Garrison",
             "ingredients" : [
                 {
                     "name" : "battery",
@@ -33,7 +33,7 @@
     ],
     "S12K shotgun" : [
         {
-            "trader" : "joel garrison",
+            "trader" : "Joel Garrison",
             "ingredients" : [
                 {
                     "name" : "ES lamp",
@@ -49,7 +49,7 @@
     ],
     "T951 assault rifle" : [
         {
-            "trader" : "joel garrison",
+            "trader" : "Joel Garrison",
             "ingredients" : [
                 {
                     "name" : "working LCD",
@@ -65,7 +65,7 @@
     ],
     ".45 caliber AP ammo" : [
         {
-            "trader" : "joel garrison",
+            "trader" : "Joel Garrison",
             "ingredients" : [
                 {
                     "name" : "enamel cup",
@@ -81,7 +81,7 @@
     ],
     "5.8x42mm DBP87 ammo" : [
         {
-            "trader" : "joel garrison",
+            "trader" : "Joel Garrison",
             "ingredients" : [
                 {
                     "name" : "light bulb",
@@ -97,7 +97,7 @@
     ],
     "simple red dot sight" : [
         {
-            "trader" : "joel garrison",
+            "trader" : "Joel Garrison",
             "ingredients" : [
                 {
                     "name" : "playing cards",
@@ -113,7 +113,7 @@
     ],
     "MP-133 710mm barrel" : [
         {
-            "trader" : "joel garrison",
+            "trader" : "Joel Garrison",
             "ingredients" : [
                 {
                     "name" : "soap",
@@ -129,7 +129,7 @@
     ],
     "926 rapid first aid kit" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "soap",
@@ -145,7 +145,7 @@
     ],
     "E3 military medkit" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "H2O2",
@@ -161,7 +161,7 @@
     ],
     "100D battlefield medkit" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "toothpaste",
@@ -177,7 +177,7 @@
     ],
     "energy drink" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "toothpaste",
@@ -193,7 +193,7 @@
     ],
     "liquid painkiller" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "toothpaste",
@@ -209,7 +209,7 @@
     ],
     "fast-acting painkiller" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "urea",
@@ -225,7 +225,7 @@
     ],
     "AP painkiller" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "medical sponge",
@@ -241,7 +241,7 @@
     ],
     "standard military surgical kit" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "syringe",
@@ -257,7 +257,7 @@
     ],
     "endurance injection" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "soap",
@@ -273,7 +273,7 @@
     ],
     "strength injection" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "toothpaste",
@@ -289,7 +289,7 @@
     ],
     "regen injection" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "bleach",
@@ -305,7 +305,7 @@
     ],
     "house key" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "lighter",
@@ -325,7 +325,7 @@
     ],
     "blue gunpowder" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "toothpaste",
@@ -345,7 +345,7 @@
     ],
     "glucose injection" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "NaCl",
@@ -365,7 +365,7 @@
     ],
     "medikal item case" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "medical sponge",
@@ -381,7 +381,7 @@
     ],
     "toolkit" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "pliers",
@@ -405,7 +405,7 @@
     ],
     "mobile phone" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "phone battery",
@@ -425,7 +425,7 @@
     ],
     "red gunpowder" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "green gunpowder",
@@ -437,7 +437,7 @@
     ],
     "drug nebulizer" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "glucose injection",
@@ -457,7 +457,7 @@
     ],
     "propane tank" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "kerosene lamp",
@@ -477,7 +477,7 @@
     ],
     "thermometer" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "syringe",
@@ -497,7 +497,7 @@
     ],
     "working LCD" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "broken LCD",
@@ -513,7 +513,7 @@
     ],
     "fuel tank" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "oil drum",
@@ -529,7 +529,7 @@
     ],
     "titanium alloy plate" : [
         {
-            "trader" : "evita",
+            "trader" : "Evita",
             "ingredients" : [
                 {
                     "name" : "steel pipe",
@@ -545,7 +545,7 @@
     ],
     "SH18 military helmet" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "DVD",
@@ -561,7 +561,7 @@
     ],
     "SH40 military helmet" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "capacitors",
@@ -577,7 +577,7 @@
     ],
     "H-Tac SWAT body armor" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "WPR tape",
@@ -597,7 +597,7 @@
     ],
     "6B13 body armor" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "tweed",
@@ -613,7 +613,7 @@
     ],
     "926 composite body armor" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "semiconductor chip",
@@ -629,7 +629,7 @@
     ],
     "RAP simple chest rig" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "pliers",
@@ -645,7 +645,7 @@
     ],
     "B4 tactical chest rig" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "broken LCD",
@@ -661,7 +661,7 @@
     ],
     "sports backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "clog remover",
@@ -677,7 +677,7 @@
     ],
     "canvas camping backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "bolts",
@@ -693,7 +693,7 @@
     ],
     "outdoor travel backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "surface cleaner",
@@ -709,7 +709,7 @@
     ],
     "RUSH tactical backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "rubber",
@@ -725,7 +725,7 @@
     ],
     "cowhide backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "lighter",
@@ -741,7 +741,7 @@
     ],
     "large camping backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "powerbank",
@@ -757,7 +757,7 @@
     ],
     "med field backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "pipe wrench",
@@ -773,7 +773,7 @@
     ],
     "retro marching backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "wind-up car",
@@ -789,7 +789,7 @@
     ],
     "chapman military backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "military canteen",
@@ -805,7 +805,7 @@
     ],
     "XA4 tactical backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "battery",
@@ -821,7 +821,7 @@
     ],
     "AMP7 assault backpack" : [
         {
-            "trader" : "deke dinson",
+            "trader" : "Deke Vinson",
             "ingredients" : [
                 {
                     "name" : "bag of cement",
@@ -841,7 +841,7 @@
     ],
     "MP5 SMG" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "weapon parts",
@@ -857,7 +857,7 @@
     ],
     "Mini14 carbine" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "flashlight",
@@ -873,7 +873,7 @@
     ],
     "M16 carbine" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "gimbal",
@@ -889,7 +889,7 @@
     ],
     "G18C pistol" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "silver badge",
@@ -905,7 +905,7 @@
     ],
     "MP9 SMG" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "powerbank",
@@ -921,7 +921,7 @@
     ],
     "M4A1 assault rifle" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "impact-resistant hard rubber",
@@ -937,7 +937,7 @@
     ],
     "SCAR-L assault rifle" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "SSD",
@@ -953,7 +953,7 @@
     ],
     "MPX SMG" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "toolkit",
@@ -969,7 +969,7 @@
     ],
     "SJ16 Bolt-Action rifle" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "bulletproof gel",
@@ -985,7 +985,7 @@
     ],
     "desert eagle pistol" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "tape",
@@ -1005,7 +1005,7 @@
     ],
     "F2000 assault rifle" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "PSU",
@@ -1025,7 +1025,7 @@
     ],
     "MP5 50-Round magazine" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "powerbank",
@@ -1037,7 +1037,7 @@
     ],
     "MPX 41-Round extended magazine" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "bolts",
@@ -1053,7 +1053,7 @@
     ],
     "MPX 50-Round polymer drum" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "camping lantern",
@@ -1069,7 +1069,7 @@
     ],
     "SJ16 5-Round magazine" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "T-Shaped plug",
@@ -1085,7 +1085,7 @@
     ],
     "universal AR 60-Round polymer drum" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "toolkit",
@@ -1101,7 +1101,7 @@
     ],
     "g series pistol 33-Round extended mag" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "circuit board",
@@ -1117,7 +1117,7 @@
     ],
     "5.56x45mm M855 ammo" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "blue gunpowder",
@@ -1133,7 +1133,7 @@
     ],
     "9x19 AP6.3 ammo" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "power cord",
@@ -1149,7 +1149,7 @@
     ],
     "3.5x scope" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "pliers",
@@ -1165,7 +1165,7 @@
     ],
     "5.56x46 suppressor" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "game cartrige",
@@ -1181,7 +1181,7 @@
     ],
     "MP5 tactical stock" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "photo frame",
@@ -1197,7 +1197,7 @@
     ],
     "AR recoil buffer" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "high power flashlight",
@@ -1213,7 +1213,7 @@
     ],
     "2.5\" modular lock rail" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "nut",
@@ -1229,7 +1229,7 @@
     ],
     "2\" modular lock rail" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "awl",
@@ -1245,7 +1245,7 @@
     ],
     "4.1\" modular lock rail" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "metal lighter",
@@ -1257,7 +1257,7 @@
     ],
     "AR special universal handguard" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "MP tools",
@@ -1273,7 +1273,7 @@
     ],
     "AR-series carbine handguard" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "pliers",
@@ -1289,7 +1289,7 @@
     ],
     "MP5SD polymer handguard" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "awl",
@@ -1305,7 +1305,7 @@
     ],
     "MPX 10.5\" modular locking handguard" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "writing pad",
@@ -1321,7 +1321,7 @@
     ],
     "MPX 14\" modular locking handguard" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "canteen",
@@ -1337,7 +1337,7 @@
     ],
     "MP5 High-Performance SD upper receiver" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "notebook",
@@ -1353,7 +1353,7 @@
     ],
     "MPX standard barrel" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "H2O2",
@@ -1369,7 +1369,7 @@
     ],
     "MPX extended barrel" : [
         {
-            "trader" : "thomas edward",
+            "trader" : "Thomas Edward",
             "ingredients" : [
                 {
                     "name" : "cable",

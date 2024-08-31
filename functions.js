@@ -106,7 +106,7 @@ async function showTrade(inputName) {
             var traderPic = document.createElement('img')
             traderPic.classList = "trader-pic"
             traderPic.alt = trade.trader
-            traderPic.src = "/files/images/contacts/" + capitalize(trade.trader) + ".png"
+            traderPic.src = "/files/images/contacts/" + trade.trader + ".png"
             addTooltip(traderPic, capitalize(trade.trader))
             tradeElem.append(traderPic)
 
