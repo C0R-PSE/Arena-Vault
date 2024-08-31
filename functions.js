@@ -197,8 +197,12 @@ function showPreview(itemName) {
     preview.querySelector('.preview-header').innerText = capitalize(item.name)
     preview.querySelector('.preview-data.category').innerText = capitalize(item.category)
     preview.querySelector('.preview-data.weight').innerText = item.weight + "kg"
-    preview.querySelector('.preview-data.value').innerHTML = '<img class="koen" alt = "koen" src="/files/images/items/koen.webp">' + item.value
-    preview.querySelector('.preview-data.size').style = "width: " + (item.size[0]*7 - 2) + "px; height: " + (item.size[2]*7 - 2) + "px"
+    var valueElem = preview.querySelector('.preview-data.value')
+    valueElem.innerHTML = '<img class="koen" alt = "koen" src="/files/images/items/koen.webp">' + item.value
+    addTooltip(valueElem, 'Item value is an estimate from the contact.')
+    var sizeElem = preview.querySelector('.preview-data.size')
+    sizeElem.style = "width: " + (item.size[0]*7 - 2) + "px; height: " + (item.size[2]*7 - 2) + "px"
+    addTooltip(sizeElem, 'Size')
     preview.querySelector('.preview-info-area').innerText = item.description
 }
 
