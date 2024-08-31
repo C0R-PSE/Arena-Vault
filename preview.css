@@ -1,0 +1,67 @@
+.preview-window {
+    display:flex;
+    flex-direction: column;
+    width:650px;
+    border: 2px solid #3a3a3a;
+    &.common .preview-header:before{
+        background-color: var(--common-color);
+    }
+    &.rare .preview-header:before{
+        background-color: var(--rare-color);
+    }
+    &.gold .preview-header:before{
+        background-color: var(--gold-color);
+    }
+    &.legendary .preview-header:before{
+        background-color: var(--legendary-color);
+    }
+}
+.preview-header {
+    display: flex;
+    gap:6px;
+    width: 100%;
+    height: 45px;
+    background-color: #121214;
+    border-bottom: 1px solid #3a3a3a;
+    align-items: flex-end;
+    padding: 0 0 7px 13px;
+    font-size: 21px;
+    line-height: 20px;
+    &:before{
+        display: block;
+        content: "";
+        width: 4px;
+        height: 20px;
+    }
+}
+.preview-picture-area {
+    position: relative;
+    /*height: 250px; for 1 and 2 cell-sized items */
+    height: 330px;
+    border-bottom: 1px solid #3a3a3a;
+}
+.preview-info-area {
+    min-height: 100px;
+    background-color: #0f0f0f;
+}
+.preview-picture-area > .preview-data {
+    width: max-content;
+    position: absolute;
+}
+.preview-picture-area > .preview-data.weight {
+    top: 22px;
+    right: 10px;
+}
+.preview-picture-area > .preview-data.value {
+    top: 5px;
+    right: 10px;
+}
+.preview-picture-area > .preview-data.category {
+    top: 5px;
+    left: 10px;
+}
+.preview-picture-area > .preview-data.size {
+    top: 24px;
+    left: 10px;
+    background-image: url('./icons/space-square.png');
+}

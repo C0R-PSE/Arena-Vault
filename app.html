@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arena Vault</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./preview.css">
+    <link rel="stylesheet" href="./variables.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <!--
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    -->
+    <script type="text/javascript" src="./items.json"></script>
+    <script type="module" src="./interactions.js"></script>
+    <script type="module" src="./functions.js"></script>
+    <!--
+    <script src="https://requirejs.org/docs/release/2.3.7/minified/require.js"></script>
+    -->
+  </head>
+  <body>
+    <div id="custom-tooltip" class="tooltip hidden"></div>
+    <div class = "content-wrapper">
+        <div class = "content">
+            <div class = trade-wrapper>
+              <div id="trade_panel" class="trade_panel craft">
+                <div id="target-item" class="target item"></div>
+                <div class="tabs">
+                  <div class="tab craft">Craft</div>
+                  <div class="tab trade">Trade</div>
+                </div>
+                <div id="craft-ui" class="craft-ui">
+                  <div class="craft-text">Available crafts:</div>
+                  <div class="trades-list-wrapper">
+                    <div id="crafts-list" class="crafts-list">
+                      <div class="trade">
+                        <div class="trader-pic"></div>
+                        <div class="ingredients-list">
+                          <div class="item ingredient"></div>
+                          <div class="item ingredient"></div>
+                          <div class="item ingredient"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="trade-ui" class="trade-ui">
+                  <div class="craft-text">Available trades:</div>
+                  <div class="trades-list-wrapper">
+                    <div id="trades-list" class="trades-list">
+                      <div class="trade">
+                        <div class="trader-pic"></div>
+                        <div class="ingredients-list">
+                          <div class="item ingredient"></div>
+                          <div class="item ingredient"></div>
+                          <div class="item ingredient"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="trade-footer">
+                  <div id="trade-button-back" class="trade-button back disabled">back</div>
+                  <div id="trade-button-forward" class="trade-button forward disabled">forward</div>
+                </div>
+              </div>
+              <div id="items-grid" class="items-grid loading" sort="quality" sortorder="asc">
+                <div id="load-panel"><div id="progress-bar" style="background-image: linear-gradient(90deg, black 0 0, transparent 0 100%)"></div></div>
+                <script type="module" src="./grid.js"></script>
+              </div>
+              <div id="grid-search" class="grid-search">
+                <input type="search" placeholder="" id="search-field" autocomplete="off" spellcheck="false">
+                <div class="checkbox" type="quality" data="common"></div>
+                <div class="checkbox" type="quality" data="rare"></div>
+                <div class="checkbox" type="quality" data="gold"></div>
+                <div class="checkbox" type="quality" data="legendary"></div>
+                <div id="dropdown" class="dropdown" sort="quality">sort by: 
+                  <div class="optionsList">
+                    <div class="option">name</div>
+                    <div class="option">quality</div>
+                    <div class="option">value</div>
+                  </div>
+                </div>
+                <div id="sortOrderToggle" class="sortOrderToggle"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script type="module" src="./eventListeners.js"></script>
+</html>
