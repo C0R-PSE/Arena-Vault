@@ -8,6 +8,11 @@
     src: url("./files/fonts/Rajdhani/Rajdhani-Medium.ttf");
 }
 
+@font-face {
+    font-family: 'Rajdhani Light';
+    src: url("./files/fonts/Rajdhani/Rajdhani-Light.ttf");
+}
+
 body {
     user-select: none;
     font-family: 'Rajdhani Medium', sans-serif;
