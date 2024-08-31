@@ -63,5 +63,5 @@
 .preview-picture-area > .preview-data.size {
     top: 24px;
     left: 10px;
-    background-image: url('./icons/space-square.png');
+    background-image: url('/icons/space-square.png');
 }

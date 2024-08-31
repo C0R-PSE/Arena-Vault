@@ -1,8 +1,8 @@
-import { addTooltip, tooltip } from "./eventListeners.js";
+import { addTooltip, tooltip } from "/eventListeners.js";
 
 export async function fetchPic(item) {
-    var pathJson = await fetch('./categoryPaths.json').then(resp => resp.json())
-    var path = './files/images/items/' + pathJson[item.category] + '/' + item.shortName + '.webp'
+    var pathJson = await fetch('/categoryPaths.json').then(resp => resp.json())
+    var path = '/files/images/items/' + pathJson[item.category] + '/' + item.shortName + '.webp'
     return(path)
 }
 
@@ -32,8 +32,8 @@ async function setItemActive(itemName) {
 
 }
 
-export var itemsJson = await fetch('./items.json').then(resp => resp.json())
-export var tradesJson = await fetch('./trades.json').then(resp => resp.json())
+export var itemsJson = await fetch('/items.json').then(resp => resp.json())
+export var tradesJson = await fetch('/trades.json').then(resp => resp.json())
 
 var tradesPlacehoder = '<div class="trade"><div class="trader-pic"></div><div class="ingredients-list"><div class="item ingredient empty"></div><div class="item ingredient empty"></div><div class="item ingredient empty"></div></div></div>'
 async function showTrade(inputName) {
@@ -61,7 +61,7 @@ async function showTrade(inputName) {
             var traderPic = document.createElement('img')
             traderPic.classList = "trader-pic"
             traderPic.alt = trade.trader
-            traderPic.src = "./files/images/contacts/" + trade.trader + ".png"
+            traderPic.src = "/files/images/contacts/" + trade.trader + ".png"
             addTooltip(traderPic, capitalize(trade.trader))
             tradeElem.append(traderPic)
 
@@ -106,7 +106,7 @@ async function showTrade(inputName) {
             var traderPic = document.createElement('img')
             traderPic.classList = "trader-pic"
             traderPic.alt = trade.trader
-            traderPic.src = "./files/images/contacts/" + capitalize(trade.trader) + ".png"
+            traderPic.src = "/files/images/contacts/" + capitalize(trade.trader) + ".png"
             addTooltip(traderPic, capitalize(trade.trader))
             tradeElem.append(traderPic)
 
@@ -229,7 +229,7 @@ export async function buildItem(item) {
     itemPic.classList = "item-pic"
     itemPic.alt = item.name
     itemPic.src = await fetchPic(item)
-    itemPic.setAttribute("onerror", "this.src='./files/images/items/Unknown.png'")
+    itemPic.setAttribute("onerror", "this.src='/files/images/items/Unknown.png'")
     itemElem.append(itemPic)
 
     // item value element
@@ -237,7 +237,7 @@ export async function buildItem(item) {
     var koen = document.createElement('img')
     koen.classList = "koen"
     koen.alt = "koen"
-    koen.src = "./files/images/items/koen.webp"
+    koen.src = "/files/images/items/koen.webp"
     itemValue.classList = "value"
     itemValue.append(koen)
     if (item.value >= 10000) {

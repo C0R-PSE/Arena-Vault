@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Rajdhani Regular';
-    src: url("./files/fonts/Rajdhani/Rajdhani-Regular.ttf");
+    src: url("/files/fonts/Rajdhani/Rajdhani-Regular.ttf");
 }
 
 @font-face {
     font-family: 'Rajdhani Medium';
-    src: url("./files/fonts/Rajdhani/Rajdhani-Medium.ttf");
+    src: url("/files/fonts/Rajdhani/Rajdhani-Medium.ttf");
 }
 
 @font-face {
     font-family: 'Rajdhani Light';
-    src: url("./files/fonts/Rajdhani/Rajdhani-Light.ttf");
+    src: url("/files/fonts/Rajdhani/Rajdhani-Light.ttf");
 }
 
 body {
@@ -377,15 +377,15 @@ input#search-field {
     background-position: center, center;
     background-size: 18px, contain;
     background-clip: content-box, border-box;
-    background-image: url(), url(./files/images/icons/checkbox.png);
+    background-image: url(), url(/files/images/icons/checkbox.png);
     &:hover {
-        background-image: url(), url(./files/images/icons/checkbox-hover.png);
+        background-image: url(), url(/files/images/icons/checkbox-hover.png);
     }
 }
 .checkbox.checked {
-    background-image: url(./files/images/icons/checkbox-check.png), url(./files/images/icons/checkbox.png);
+    background-image: url(/files/images/icons/checkbox-check.png), url(/files/images/icons/checkbox.png);
     &:hover {
-        background-image: url(./files/images/icons/checkbox-check.png), url(./files/images/icons/checkbox-hover.png);
+        background-image: url(/files/images/icons/checkbox-check.png), url(/files/images/icons/checkbox-hover.png);
     }
 }
 

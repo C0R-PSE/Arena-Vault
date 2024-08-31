@@ -1,5 +1,5 @@
-import { searchInputHandler, checkboxInputHandler, sortInputHandler, sortOrderToggleHandler, tradePanelSwitch } from './interactions.js'
-import { historyMove } from './functions.js'
+import { searchInputHandler, checkboxInputHandler, sortInputHandler, sortOrderToggleHandler, tradePanelSwitch } from '/interactions.js'
+import { historyMove } from '/functions.js'
 var gridSearch = document.querySelector("#grid-search")
 gridSearch.querySelector("#search-field").addEventListener("input", (e) => searchInputHandler(e.target.value))
 var checkboxes = Array.from(gridSearch.querySelectorAll(".checkbox"))

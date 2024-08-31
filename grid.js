@@ -1,6 +1,6 @@
-import { itemListClick, buildItem } from "./functions.js"
-import { gridSort } from "./interactions.js"
-import { itemsJson } from "./functions.js"
+import { itemListClick, buildItem } from "/functions.js"
+import { gridSort } from "/interactions.js"
+import { itemsJson } from "/functions.js"
 
 
 var grid = document.querySelector("#items-grid")
