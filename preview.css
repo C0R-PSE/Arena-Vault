@@ -50,7 +50,6 @@
 }
 .preview-info-area {
     display: flex;
-    min-height: 55px;
     padding: 8px 10px;
     background-color: #0f0f0f;
     align-items: center;
