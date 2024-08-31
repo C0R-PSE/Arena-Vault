@@ -38,11 +38,6 @@ export var tradesJson = await fetch('/trades.json').then(resp => resp.json())
 var tradesPlacehoder = '<div class="trade"><div class="trader-pic"></div><div class="ingredients-list"><div class="item ingredient empty"></div><div class="item ingredient empty"></div><div class="item ingredient empty"></div></div></div>'
 async function showTrade(inputName) {
     var item = itemsJson.filter((item) => item.name == inputName)[0]
-
-    // target item
-    var targetItem = document.getElementById("target-item")
-    targetItem.replaceChildren(...(await buildItem(item)).children)
-    targetItem.setAttribute("quality", item.quality)
     
     // crafts list
     var crafts = tradesJson[item.name]
@@ -194,15 +189,32 @@ export async function historyMove(input) {
     //console.log(targetItemsHistory) 
 }
 
+function showPreview(itemName) {
+    var item = itemsJson.filter((item) => item.name == itemName)[0]
+    var preview = document.getElementById("preview")
+
+    preview.setAttribute('quality', item.quality)
+    preview.querySelector('.preview-header').innerText = capitalize(item.name)
+    preview.querySelector('.preview-data.category').innerText = capitalize(item.category)
+    preview.querySelector('.preview-data.weight').innerText = item.weight + "kg"
+    preview.querySelector('.preview-data.value').innerHTML = '<img class="koen" alt = "koen" src="/files/images/items/koen.webp">' + item.value
+    preview.querySelector('.preview-data.size').style = "width: " + (item.size[0]*7 - 2) + "px; height: " + (item.size[2]*7 - 2) + "px"
+    preview.querySelector('.preview-info-area').innerText = item.description
+}
+
 export async function itemListClick(itemName) {
     if (targetItemsHistory.history[targetItemsHistory.pos] != itemName) {
         await setItemActive(itemName)
+        showPreview(itemName)
         await showTrade(itemName)
         await historyMove({
             "type" : "newItem",
             "data" : itemName
         })
         tooltip.classList.add('hidden')
+
+
+        
     }
 }
 

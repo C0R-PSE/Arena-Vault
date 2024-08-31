@@ -3,16 +3,16 @@
     flex-direction: column;
     width:650px;
     border: 2px solid #3a3a3a;
-    &.common .preview-header:before{
+    &[quality="common"] .preview-header:before{
         background-color: var(--common-color);
     }
-    &.rare .preview-header:before{
+    &[quality="rare"] .preview-header:before{
         background-color: var(--rare-color);
     }
-    &.gold .preview-header:before{
+    &[quality="gold"] .preview-header:before{
         background-color: var(--gold-color);
     }
-    &.legendary .preview-header:before{
+    &[quality="legendary"] .preview-header:before{
         background-color: var(--legendary-color);
     }
 }
@@ -36,13 +36,24 @@
 }
 .preview-picture-area {
     position: relative;
-    /*height: 250px; for 1 and 2 cell-sized items */
-    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    /*height: 330px;*/
+    background-image: url(/files/images/item-preview-bg.png);
+    background-size: 100% 100%;
     border-bottom: 1px solid #3a3a3a;
 }
+.preview-picture-area > img.item-preview {
+    height: 80%;
+}
 .preview-info-area {
-    min-height: 100px;
+    display: flex;
+    min-height: 55px;
+    padding: 8px 10px;
     background-color: #0f0f0f;
+    align-items: center;
 }
 .preview-picture-area > .preview-data {
     width: max-content;
@@ -63,5 +74,5 @@
 .preview-picture-area > .preview-data.size {
     top: 24px;
     left: 10px;
-    background-image: url('/icons/space-square.png');
+    background-image: url('/files/images/icons/space-square.png');
 }

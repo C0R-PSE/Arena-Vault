@@ -8,11 +8,6 @@
     src: url("/files/fonts/Rajdhani/Rajdhani-Medium.ttf");
 }
 
-@font-face {
-    font-family: 'Rajdhani Light';
-    src: url("/files/fonts/Rajdhani/Rajdhani-Light.ttf");
-}
-
 body {
     user-select: none;
     font-family: 'Rajdhani Medium', sans-serif;
@@ -276,25 +271,6 @@ body {
     flex-direction: column;
 }
 
-.trade_panel .tabs {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 0 20px;
-}
-
-.trade_panel .tab {
-    width: 150px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
-    border-color: #7e7e7e;
-    text-align: center;
-    padding: 5px 0 10px;
-    transition: all .2s;
-    cursor: default;
-}
-
 .trade_panel .tab:hover {
     border-color: #FFFFFF;
 }
@@ -309,21 +285,27 @@ body {
     display: none;
 }
 .trade-footer {
-    width: 100%;
+    width: 750px;
     display:flex;
-    gap:20px;
-    margin-top: 25px;
     height: 30px;
-    align-items: center;
-    justify-content: center;
 }
 .trade-footer .trade-button {
-    width:100px;
-    height:20px;
+    min-width:100px;
     background-color: #1a1a1a;
     &.disabled {
         color: transparent
     }
+}
+.trade-footer .tab {
+    width: 100%;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-color: #7e7e7e;
+    text-align: center;
+    padding: 5px 0 10px;
+    transition: all .2s;
+    cursor: default;
 }
 
 
@@ -331,7 +313,6 @@ body {
     width: 127px;
     height: 167px;
     background: var(--contacts-frame);
-    /*background-clip: border-box, content-box, border-box;*/
     padding: 3px;
     position: absolute;
     top: 10px;
@@ -445,6 +426,6 @@ border: #383a38
 .hidden {
     display:none
 }
-* {
+div, img {
     box-sizing: border-box;
 }

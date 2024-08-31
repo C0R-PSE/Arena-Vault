@@ -25,10 +25,15 @@
         <div class = "content">
             <div class = trade-wrapper>
               <div id="trade_panel" class="trade_panel craft">
-                <div id="target-item" class="target item"></div>
-                <div class="tabs">
-                  <div class="tab craft">Craft</div>
-                  <div class="tab trade">Trade</div>
+                <div id="preview" class="preview-window">
+                    <div class="preview-header"></div>
+                    <div class="preview-picture-area">
+                        <div class="preview-data category"></div>
+                        <div class="preview-data size"></div>
+                        <div class="preview-data weight"></div>
+                        <div class="preview-data value"></div>
+                    </div>
+                    <div class="preview-info-area"></div>
                 </div>
                 <div id="craft-ui" class="craft-ui">
                   <div class="craft-text">Available crafts:</div>
@@ -62,6 +67,8 @@
                 </div>
                 <div class="trade-footer">
                   <div id="trade-button-back" class="trade-button back disabled">back</div>
+                  <div class="tab craft">Craft</div>
+                  <div class="tab trade">Trade</div>
                   <div id="trade-button-forward" class="trade-button forward disabled">forward</div>
                 </div>
               </div>
