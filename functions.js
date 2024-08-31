@@ -28,7 +28,6 @@ async function setItemActive(itemName) {
     if (activeElement) {
         activeElement.classList.remove("active")
     }
-    console.log(itemName)
     document.querySelector('#items-grid').querySelector("[name='" + itemName + "']").classList.add("active")
 
 }
@@ -216,14 +215,11 @@ export async function buildItem(item) {
     itemElem.setAttribute('value', item.value)
 
     // item name element
-    console.log(item)
     var itemName = document.createElement('div')
-    console.log(item.shortName.length)
     if (item.shortName.length > 0) {
         itemName.innerHTML = item.shortName
     } else {
         itemName.innerHTML = item.name
-        console.log(itemName.innerHTML)
     }
     itemName.classList = "item-name"
     itemElem.append(itemName)
