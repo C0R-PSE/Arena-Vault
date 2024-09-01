@@ -80,7 +80,7 @@ async function showTrade(inputName) {
 
             for (var k in trade.ingredients) {
                 var ingredient = trade.ingredients[k]
-                var ingredientElem = await buildItem(itemsJson.filter((item) => item.name == ingredient.name)[0], 'ingredient', ingredient)
+                var ingredientElem = await buildItem(itemsJson.filter((item) => item.name == ingredient.name)[0], {"type" : "ingredient", "data" : ingredient})
                 ingredientsList.append(ingredientElem)     
             }
             craftsElemsArray.push(tradeElem)
@@ -123,11 +123,11 @@ async function showTrade(inputName) {
                 tradeItems.classList = "ingredients-list"
                 for (var k in trade.ingredients) {
                     var ingredient = trade.ingredients[k]
-                    var ingredientElem = await buildItem(itemsJson.filter((item) => item.name == ingredient.name)[0], 'ingredient', ingredient)
+                    var ingredientElem = await buildItem(itemsJson.filter((item) => item.name == ingredient.name)[0], {"type" : "ingredient", "data" : ingredient})
                     tradeItems.append(ingredientElem)
                 }
     
-                var resultItemElem = await buildItem(itemsJson.filter((item) => item.name == inTrades[i])[0], 'result', trade)
+                var resultItemElem = await buildItem(itemsJson.filter((item) => item.name == inTrades[i])[0], {"type" : "result", "data" : trade})
                 
                 tradeElem.append(tradeItems)  
                 tradeElem.append(resultItemElem) 
@@ -215,11 +215,13 @@ export async function itemListClick(itemName, itemElem) {
     }
 }
 
-export async function buildItem(item, type, object) {
+export async function buildItem(item, settings) {
     // item element
     var itemElem = document.createElement('div')
     itemElem.classList = "item"
-    if (type) {
+    var type
+    if (settings) {
+        type = settings.type
         itemElem.classList.add(type)
     }
     itemElem.setAttribute('name', item.name)
@@ -249,8 +251,9 @@ export async function buildItem(item, type, object) {
     var itemValue = document.createElement('div')
     if (type == 'ingredient' || type == 'result') {
         itemValue.classList = "amount"
-        if (object.amount > 1) {
-            itemValue.innerText = object.amount
+        var amount = settings.data.amount
+        if (amount > 1) {
+            itemValue.innerText = amount
         }
     } else {
         itemValue.classList = "value"
