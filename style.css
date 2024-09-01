@@ -46,6 +46,7 @@ body {
 .loading.items-grid {
     display: block;
     overflow-y: hidden;
+    padding-right: 23px; /* 15px grid padding + 10px scroll width - 2px items border */
 }
 .loading .item {
     display: none;
