@@ -404,6 +404,7 @@ input#search-field {
     font-size: 20px;
     display: block;
     position: fixed;
+    top: -100px;
     overflow: hidden;
     padding: 1px 10px;
     height: 27px;
