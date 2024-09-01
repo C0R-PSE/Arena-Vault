@@ -13,6 +13,19 @@ export function UrlExists(url) {
     return http.status!=404;
 }
 
+export function arrSimilar(a, b, orderMatters) {
+    var check = false
+    if ((a && b) && (a.length == b.length)) {
+        check = true
+        for (var i in a) {
+            if ((orderMatters && a[i] != b[i]) || b.indexOf(a[i]) == -1) {
+                check = false
+            }
+        }
+    }
+    return check
+}
+
 export function capitalize(string) {
     var words = string.split(' ')
     var output = ''
@@ -81,30 +94,13 @@ async function showTrade(inputName) {
     var inTrades = item.inTrades
 
     // checking if trades are similar
-    var changeCheck = true
+    var currentTrades = undefined
     if (targetItemsHistory.history.length > 0) {
-        var changeCheck = false
-        var currentTrades = itemsJson.filter(itemCheck => itemCheck.name == targetItemsHistory.history[targetItemsHistory.pos])[0].inTrades
-        var a = []
-        var b = []
-        for (item in inTrades) {
-            a.push(inTrades[item].replace('.', ''))
-        }
-        for (item in currentTrades) {
-            b.push(currentTrades[item].replace('.', ''))
-        }
-        a = a.sort((c, d) => c.toString().localeCompare(d.toString(), undefined, {numeric: true}))
-        b = b.sort((c, d) => c.toString().localeCompare(d.toString(), undefined, {numeric: true}))
-        if (b.length > a.length) {
-            a = [b, b = a][0]
-        }
-        for (var i = 0; i < a.length; i++ ) {
-            if ((b.indexOf(a[i]) > -1 && b.indexOf(a[i]) != i) || b.indexOf(a[i]) == -1) {
-                changeCheck = true
-            }
-        }
+        currentTrades = itemsJson.filter(itemCheck => itemCheck.name == targetItemsHistory.history[targetItemsHistory.pos])[0].inTrades
     }
-    if (changeCheck) { // different trades - apply changes
+    if (arrSimilar(inTrades, currentTrades, false)) { // identical trades - nochange
+        console.log('nochange - identical trades')
+    } else { // different trades - apply changes
         var tradesList = document.getElementById("trades-list")
         if (inTrades.length > 0) {
             var tradesElemsArray = []
@@ -141,8 +137,6 @@ async function showTrade(inputName) {
         } else {
             tradesList.innerHTML = tradesPlacehoder
         }
-    } else { // identical trades - nochange
-        console.log('nochange - identical trades')
     }
 }
 
