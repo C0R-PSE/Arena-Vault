@@ -10,7 +10,7 @@ for (var i in itemsJson) {
     grid.querySelector("#progress-bar").style.backgroundImage = "linear-gradient(90deg, black 0" + progress + "%, transparent " + progress + "%)"
 }
 grid.classList.toggle("loading")
-gridSort(itemListClick)
+gridSort()
 
 
     
