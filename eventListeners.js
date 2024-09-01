@@ -58,7 +58,7 @@ function tooltipMove(event) {
 
 }
 
-async function triggerTooltip(event, text, unchecked) {
+export async function triggerTooltip(event, text, unchecked) {
   tooltip.innerText = text
   if (unchecked) {
     tooltip.setAttribute('unchecked', '')
@@ -68,7 +68,7 @@ async function triggerTooltip(event, text, unchecked) {
   window.onmousemove = (event) => tooltipMove(event)
   tooltip.classList.remove('hidden')
 }
-async function hideTooltip() {
+export async function hideTooltip() {
   tooltip.classList.add('hidden')
   window.onmousemove = function() {}
   tooltip.innerText = ""

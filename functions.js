@@ -1,4 +1,4 @@
-import { addTooltip, tooltip } from "/eventListeners.js";
+import { addTooltip, tooltip, hideTooltip } from "/eventListeners.js";
 
 export async function fetchPic(item) {
     var pathJson = await fetch('/categoryPaths.json').then(resp => resp.json())
@@ -47,12 +47,12 @@ async function showTrade(inputName) {
         for (var i in crafts) {
             var trade = crafts[i]
 
-            //trade
+            // trade
             var tradeElem = document.createElement('div')
             tradeElem.classList = "trade"
             tradeElem.setAttribute('trader', trade.trader)
             
-            
+            // trader picture
             var traderPic = document.createElement('img')
             traderPic.classList = "trader-pic"
             traderPic.alt = trade.trader
@@ -60,23 +60,15 @@ async function showTrade(inputName) {
             addTooltip(traderPic, capitalize(trade.trader))
             tradeElem.append(traderPic)
 
-            var tradeItems = document.createElement('div')
-            tradeItems.classList = "ingredients-list"
-            tradeElem.append(tradeItems)
+            // ingredients
+            var ingredientsList = document.createElement('div')
+            ingredientsList.classList = "ingredients-list"
+            tradeElem.append(ingredientsList)
 
             for (var k in trade.ingredients) {
                 var ingredient = trade.ingredients[k]
-                var ingredientElem = await buildItem(itemsJson.filter((item) => item.name == ingredient.name)[0])
-                ingredientElem.classList.add("ingredient")
-                var ingredientAmount = ingredientElem.querySelector('.value')
-                if (ingredient.amount > 1) {
-                    ingredientAmount.classList.add('amount')
-                    ingredientAmount.classList.remove('value')
-                    ingredientAmount.innerText = ingredient.amount
-                } else {
-                    ingredientAmount.remove()
-                }
-                tradeItems.append(ingredientElem)     
+                var ingredientElem = await buildItem(itemsJson.filter((item) => item.name == ingredient.name)[0], 'ingredient', ingredient)
+                ingredientsList.append(ingredientElem)     
             }
             craftsElemsArray.push(tradeElem)
         }
@@ -87,63 +79,71 @@ async function showTrade(inputName) {
 
     // trade list
     var inTrades = item.inTrades
-    var tradesList = document.getElementById("trades-list")
-    if (inTrades.length > 0) {
-        var tradesElemsArray = []
-        for (var i in inTrades) {
-            var trade = tradesJson[inTrades[i]].filter(trade => trade.ingredients.filter(ingredient => ingredient.name == item.name))[0]
 
-            var tradeElem = document.createElement('div')
-            tradeElem.classList = "trade"
-            tradeElem.setAttribute('trader', trade.trader)
-            
-            
-            var traderPic = document.createElement('img')
-            traderPic.classList = "trader-pic"
-            traderPic.alt = trade.trader
-            traderPic.src = "/files/images/contacts/" + trade.trader + ".png"
-            addTooltip(traderPic, capitalize(trade.trader))
-            tradeElem.append(traderPic)
-
-            var tradeItems = document.createElement('div')
-            tradeItems.classList = "ingredients-list"
-            for (var k in trade.ingredients) {
-                var ingredient = trade.ingredients[k]
-
-                var ingredientElem = await buildItem(itemsJson.filter((item) => item.name == ingredient.name)[0])
-                var ingredientAmount = ingredientElem.querySelector('.value')
-                if (ingredient.amount > 1) {
-                    ingredientAmount.classList.add('amount')
-                    ingredientAmount.classList.remove('value')
-                    ingredientAmount.innerText = ingredient.amount
-                } else {
-                    ingredientAmount.remove()
-                }
-
-                tradeItems.append(ingredientElem)
-            }
-
-            var resultItemElem = await buildItem(itemsJson.filter((item) => item.name == inTrades[i])[0])
-            resultItemElem.classList.add('result')
-            var resultAmount = resultItemElem.querySelector('.value')
-            if (trade.amount > 1) {
-                resultAmount.classList.add('amount')
-                resultAmount.classList.remove('value')
-                resultAmount.innerText = trade.amount
-            } else {
-                resultAmount.remove()
-            }
-            
-            tradeElem.append(tradeItems)  
-            tradeElem.append(resultItemElem) 
-            tradesElemsArray.push(tradeElem)
+    // checking if trades are similar
+    var changeCheck = true
+    if (targetItemsHistory.history.length > 0) {
+        var changeCheck = false
+        var currentTrades = itemsJson.filter(itemCheck => itemCheck.name == targetItemsHistory.history[targetItemsHistory.pos])[0].inTrades
+        var a = []
+        var b = []
+        for (item in inTrades) {
+            a.push(inTrades[item].replace('.', ''))
         }
-        tradesList.replaceChildren(...tradesElemsArray)
-    } else {
-        tradesList.innerHTML = tradesPlacehoder
+        for (item in currentTrades) {
+            b.push(currentTrades[item].replace('.', ''))
+        }
+        a = a.sort((c, d) => c.toString().localeCompare(d.toString(), undefined, {numeric: true}))
+        b = b.sort((c, d) => c.toString().localeCompare(d.toString(), undefined, {numeric: true}))
+        if (b.length > a.length) {
+            a = [b, b = a][0]
+        }
+        for (var i = 0; i < a.length; i++ ) {
+            if ((b.indexOf(a[i]) > -1 && b.indexOf(a[i]) != i) || b.indexOf(a[i]) == -1) {
+                changeCheck = true
+            }
+        }
     }
+    if (changeCheck) { // different trades - apply changes
+        var tradesList = document.getElementById("trades-list")
+        if (inTrades.length > 0) {
+            var tradesElemsArray = []
+            for (var i in inTrades) {
+                var trade = tradesJson[inTrades[i]].filter(trade => trade.ingredients.filter(ingredient => ingredient.name == item.name))[0]
     
-
+                var tradeElem = document.createElement('div')
+                tradeElem.classList = "trade"
+                tradeElem.setAttribute('trader', trade.trader)
+                
+                
+                var traderPic = document.createElement('img')
+                traderPic.classList = "trader-pic"
+                traderPic.alt = trade.trader
+                traderPic.src = "/files/images/contacts/" + trade.trader + ".png"
+                addTooltip(traderPic, capitalize(trade.trader))
+                tradeElem.append(traderPic)
+    
+                var tradeItems = document.createElement('div')
+                tradeItems.classList = "ingredients-list"
+                for (var k in trade.ingredients) {
+                    var ingredient = trade.ingredients[k]
+                    var ingredientElem = await buildItem(itemsJson.filter((item) => item.name == ingredient.name)[0], 'ingredient', ingredient)
+                    tradeItems.append(ingredientElem)
+                }
+    
+                var resultItemElem = await buildItem(itemsJson.filter((item) => item.name == inTrades[i])[0], 'result', trade)
+                
+                tradeElem.append(tradeItems)  
+                tradeElem.append(resultItemElem) 
+                tradesElemsArray.push(tradeElem)
+            }
+            tradesList.replaceChildren(...tradesElemsArray) 
+        } else {
+            tradesList.innerHTML = tradesPlacehoder
+        }
+    } else { // identical trades - nochange
+        console.log('nochange - identical trades')
+    }
 }
 
 export var targetItemsHistory = {
@@ -206,7 +206,7 @@ function showPreview(itemName) {
     preview.querySelector('.preview-info-area').innerText = item.description
 }
 
-export async function itemListClick(itemName) {
+export async function itemListClick(itemName, itemElem) {
     if (targetItemsHistory.history[targetItemsHistory.pos] != itemName) {
         await setItemActive(itemName)
         showPreview(itemName)
@@ -215,19 +215,21 @@ export async function itemListClick(itemName) {
             "type" : "newItem",
             "data" : itemName
         })
-        tooltip.classList.add('hidden')
-
-
-        
+        if (itemElem.classList.contains('result') || itemElem.classList.contains('ingredient')) {
+            hideTooltip()
+        }
     }
 }
 
-export async function buildItem(item) {
+export async function buildItem(item, type, object) {
     // item element
     var itemElem = document.createElement('div')
     itemElem.classList = "item"
+    if (type) {
+        itemElem.classList.add(type)
+    }
     itemElem.setAttribute('name', item.name)
-    itemElem.setAttribute('quality', item.quality)
+    itemElem.setAttribute('quality', item.quality) 
     itemElem.setAttribute('value', item.value)
 
     // item name element
@@ -244,27 +246,31 @@ export async function buildItem(item) {
     var itemPic = document.createElement('img')
     itemPic.classList = "item-pic"
     itemPic.alt = item.name
-    itemPic.src = await fetchPic(item)
+    //itemPic.src = await fetchPic(item)
+    itemPic.src = "/files/images/items/Unknown.png"
     itemPic.setAttribute("onerror", "this.src='/files/images/items/Unknown.png'")
     itemElem.append(itemPic)
 
-    // item value element
+    // item value/amount element
     var itemValue = document.createElement('div')
-    var koen = document.createElement('img')
-    koen.classList = "koen"
-    koen.alt = "koen"
-    koen.src = "/files/images/items/koen.webp"
-    itemValue.classList = "value"
-    itemValue.append(koen)
-    if (item.value >= 10000) {
-        itemValue.append(Math.floor(item.value / 1000) + 'k')
+    if (type == 'ingredient' || type == 'result') {
+        itemValue.classList = "amount"
+        if (object.amount > 1) {
+            itemValue.innerText = object.amount
+        }
     } else {
-        itemValue.append(item.value)
+        itemValue.classList = "value"
+        itemValue.innerHTML = '<img class="koen" alt="koen" src="/files/images/items/koen.webp">'
+        if (item.value >= 10000) {
+            itemValue.append(Math.floor(item.value / 1000) + 'k')
+        } else {
+            itemValue.append(item.value)
+        }
     }
     itemElem.append(itemValue)
     
     //applying changes
-    itemElem.addEventListener('click', itemListClick.bind(this, item.name))
+    itemElem.addEventListener('click', () => { itemListClick(item.name, itemElem) })
     addTooltip(itemElem, capitalize(item.name))
 
     return(itemElem)
