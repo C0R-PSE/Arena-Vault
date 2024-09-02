@@ -51,10 +51,11 @@ function tooltipMove(event) {
   var x = event.clientX,
       y = event.clientY;
   tooltip.style.top = (y - 17) + 'px';
-  //if (x + tooltip.offsetWidth + 5 < widthCheck || tooltip.hasAttribute('unchecked')) {
   if (x + tooltip.offsetWidth + 5 < wWidth) {
+    tooltip.classList.remove('left')
     tooltip.style.left = (x + 5) + 'px';
   } else {
+    tooltip.classList.add('left')
     tooltip.style.left = (x - 5 - tooltip.offsetWidth) + 'px';
   }
 

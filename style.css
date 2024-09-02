@@ -398,6 +398,9 @@ input#search-field {
 }
 
 .tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     font-family: 'Rajdhani Regular';
     line-height: 27px;
     font-size: 20px;
@@ -405,6 +408,9 @@ input#search-field {
     top: -100px;
     overflow: hidden;
     z-index: 200;
+}
+.tooltip.left {
+    align-items: flex-end;
 }
 .tooltip-text {
     width: max-content;
@@ -420,6 +426,9 @@ input#search-field {
 }
 .tooltip-hints {
     padding: 1px 10px;
+}
+.tooltip.left .tooltip-hints {
+    text-align: right;
 }
 /* 
 edges: #575b57
