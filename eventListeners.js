@@ -42,6 +42,8 @@ function contentWidthCheck() {
 }
 var tooltip = document.getElementById('custom-tooltip');
 var tooltipText = tooltip.querySelector('.tooltip-text');
+var tooltipTextBuffer = ''
+var tooltipHintsBuffer = ''
 var tooltipHints = tooltip.querySelector('.tooltip-hints');
 var widthCheck = contentWidthCheck()
 var wWidth = window.innerWidth
@@ -50,7 +52,7 @@ window.onresize = () => { widthCheck = contentWidthCheck(); wWidth = window.inne
 function tooltipMove(event) {
   var x = event.clientX,
       y = event.clientY;
-  tooltip.style.top = (y - 17) + 'px';
+  tooltip.style.top = (y - tooltipText.offsetHeight + 10) + 'px';
   if (x + tooltip.offsetWidth + 5 < wWidth) {
     tooltip.classList.remove('left')
     tooltip.style.left = (x + 5) + 'px';
@@ -62,7 +64,9 @@ function tooltipMove(event) {
 }
 
 export async function triggerTooltip(event, text, hints, unchecked) {
-  tooltipText.innerText = text
+  tooltipTextBuffer = tooltipText.innerHTML
+  tooltipHintsBuffer = tooltipHints.innerHTML
+  tooltipText.innerHTML = text
   tooltipHints.innerHTML = hints
   if (unchecked) {
     tooltip.setAttribute('unchecked', '')
@@ -72,11 +76,16 @@ export async function triggerTooltip(event, text, hints, unchecked) {
   window.onmousemove = (event) => tooltipMove(event)
   tooltip.classList.remove('hidden')
 }
-export async function hideTooltip() {
-  tooltip.classList.add('hidden')
-  window.onmousemove = function() {}
-  tooltipText.innerText = ""
-  tooltip.style = ""
+export async function hideTooltip(event) {
+  if (event.target.classList.contains('value')) {
+    tooltipText.innerHTML = tooltipTextBuffer
+    tooltipHints.innerHTML = tooltipHintsBuffer
+  } else {
+    tooltip.classList.add('hidden')
+    window.onmousemove = function() {}
+    tooltipText.innerHTML = ""
+    tooltip.style = ""
+  }
 }
 
 export function addTooltip(elem, text, unchecked) {
@@ -84,7 +93,7 @@ export function addTooltip(elem, text, unchecked) {
   if (elem.classList.contains('item')) {
     hints = 'left click<br>right click'
   }
-  elem.addEventListener('mouseover', (event) => { triggerTooltip(event, text, hints, unchecked) })
-  elem.addEventListener('mouseout', () => { hideTooltip() })
+  elem.addEventListener('mouseenter', (event) => { triggerTooltip(event, text, hints, unchecked) })
+  elem.addEventListener('mouseleave', (event) => { hideTooltip(event) })
 }
 addTooltip(document.querySelector('#sortOrderToggle'), 'Sort Order', true)

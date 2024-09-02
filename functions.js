@@ -266,6 +266,7 @@ export async function buildItem(item, settings) {
         }
     }
     itemElem.append(itemValue)
+    addTooltip(itemValue, 'Item value is an estimate<br>from the contact.')
     
     //applying changes
     itemElem.addEventListener('click', () =>{itemListClick(itemElem)})
