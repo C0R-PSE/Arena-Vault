@@ -40,7 +40,9 @@ document.querySelector('#trade-button-forward').addEventListener('click', () => 
 function contentWidthCheck() {
   return (window.innerWidth + document.querySelector('.content').offsetWidth) / 2
 }
-export var tooltip = document.getElementById('custom-tooltip');
+var tooltip = document.getElementById('custom-tooltip');
+var tooltipText = tooltip.querySelector('.tooltip-text');
+var tooltipHints = tooltip.querySelector('.tooltip-hints');
 var widthCheck = contentWidthCheck()
 var wWidth = window.innerWidth
 window.onresize = () => { widthCheck = contentWidthCheck(); wWidth = window.innerWidth }
@@ -58,8 +60,9 @@ function tooltipMove(event) {
 
 }
 
-export async function triggerTooltip(event, text, unchecked) {
-  tooltip.innerText = text
+export async function triggerTooltip(event, text, hints, unchecked) {
+  tooltipText.innerText = text
+  tooltipHints.innerHTML = hints
   if (unchecked) {
     tooltip.setAttribute('unchecked', '')
   } else {
@@ -71,12 +74,16 @@ export async function triggerTooltip(event, text, unchecked) {
 export async function hideTooltip() {
   tooltip.classList.add('hidden')
   window.onmousemove = function() {}
-  tooltip.innerText = ""
+  tooltipText.innerText = ""
   tooltip.style = ""
 }
 
 export function addTooltip(elem, text, unchecked) {
-  elem.addEventListener('mouseover', (event) => { triggerTooltip(event, text, unchecked) })
+  var hints = ''
+  if (elem.classList.contains('item')) {
+    hints = 'left click<br>right click'
+  }
+  elem.addEventListener('mouseover', (event) => { triggerTooltip(event, text, hints, unchecked) })
   elem.addEventListener('mouseout', () => { hideTooltip() })
 }
 addTooltip(document.querySelector('#sortOrderToggle'), 'Sort Order', true)

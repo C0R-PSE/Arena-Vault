@@ -1,4 +1,4 @@
-import { addTooltip, tooltip, hideTooltip } from "/eventListeners.js";
+import { addTooltip, hideTooltip } from "/eventListeners.js";
 
 export async function fetchPic(item) {
     var pathJson = await fetch('/categoryPaths.json').then(resp => resp.json())
