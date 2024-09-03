@@ -91,7 +91,7 @@ export async function hideTooltip(event) {
 export function addTooltip(elem, text, unchecked) {
   var hints = ''
   if (elem.classList.contains('item')) {
-    hints = '<svg style="fill:currentColor" width="20" height="20" viewBox="0 0 800 800" ><use href="resources/styles/icons/left-click.svg#Capa_1"/></svg>left click<br>right click'
+    hints = 'left click<br>right click'
   }
   elem.addEventListener('mouseenter', (event) => { triggerTooltip(event, text, hints, unchecked) })
   elem.addEventListener('mouseleave', (event) => { hideTooltip(event) })
