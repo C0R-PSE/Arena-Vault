@@ -200,7 +200,7 @@ function showPreview(itemName) {
     preview.querySelector('.preview-info-area').innerText = item.description
 }
 
-export async function itemListClick(itemElem) {
+export async function itemListClick(event, itemElem) {
     var itemName = itemElem.getAttribute('name')
     if (targetItemsHistory.history[targetItemsHistory.pos] != itemName) {
         await setItemActive(itemName)
@@ -267,7 +267,6 @@ export async function buildItem(item, settings) {
         addTooltip(itemValue, 'Item value is an estimate<br>from the contact.')
     }
     itemElem.append(itemValue)
-    addTooltip(itemValue, 'Item value is an estimate<br>from the contact.')
     
     //applying changes
     itemElem.addEventListener('click', (event) =>{itemListClick(event, itemElem)})
