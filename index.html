@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Arena Vault</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/preview.css">
-    <link rel="stylesheet" href="/variables.css">
-    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/resources/styles/style.css">
+    <link rel="stylesheet" href="/resources/styles/preview.css">
+    <link rel="stylesheet" href="/resources/styles/variables.css">
+    <link rel="stylesheet" href="/resources/styles/normalize.css">
     <!--
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     -->
-    <script type="module" src="/functions.js"></script>
+    <script type="module" src="/resources/scripts/functions.js"></script>
     <!--
     <script src="https://requirejs.org/docs/release/2.3.7/minified/require.js"></script>
     -->
   </head>
   <body>
-    <div id="custom-tooltip" class="tooltip hidden"></div>
+    <div id="custom-tooltip" class="tooltip hidden">
+      <div class="tooltip-text"></div>
+      <div class="tooltip-hints"></div>
+    </div>
     <div class = "content-wrapper">
         <div class = "content">
             <div class = trade-wrapper>
@@ -72,7 +75,7 @@
               </div>
               <div id="items-grid" class="items-grid loading" sort="quality" sortorder="asc">
                 <div id="load-panel"><div id="progress-bar" style="background-image: linear-gradient(90deg, black 0 0, transparent 0 100%)"></div></div>
-                <script type="module" src="/grid.js"></script>
+                <script type="module" src="/resources/scripts/grid.js"></script>
               </div>
               <div id="grid-search" class="grid-search">
                 <input type="search" placeholder="" id="search-field" autocomplete="off" spellcheck="false">
@@ -93,5 +96,5 @@
         </div>
     </div>
   </body>
-  <script type="module" src="/eventListeners.js"></script>
+  <script type="module" src="/resources/scripts/eventListeners.js"></script>
 </html>

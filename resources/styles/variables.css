@@ -1,0 +1,91 @@
+body { /* colors */
+    --common-color: #353535;
+    --rare-color: #4d2e56;
+    --gold-color: #6b4d1c;
+    --legendary-color: #6d291e;
+    --text-color-greenish: #a0a9a6;
+}
+.trader-pic { /* contacts frame */
+    --contacts-frame: 
+    linear-gradient(
+        90deg,
+        #7c8e8e 0px 7px, 
+        transparent 7px 10px, 
+        #313534 10px calc(100% - 10px), 
+        transparent calc(100% - 10px) calc(100% - 7px), 
+        #7c8e8e calc(100% - 7px)
+    )
+    top / 100% 1px
+    no-repeat,
+    linear-gradient(
+        #7c8e8e 0px 7px, 
+        transparent 7px 10px, 
+        #313534 10px calc(100% - 10px), 
+        transparent calc(100% - 10px) calc(100% - 7px), 
+        #7c8e8e calc(100% - 7px)
+    )
+    right / 1px 100%
+    no-repeat,
+    linear-gradient(
+        90deg,
+        #7c8e8e 0px 7px, 
+        transparent 7px 10px, 
+        #313534 10px calc(100% - 10px), 
+        transparent calc(100% - 10px) calc(100% - 7px), 
+        #7c8e8e calc(100% - 7px)
+    )
+    bottom / 100% 1px
+    no-repeat,
+    linear-gradient(
+        #7c8e8e 0px 7px, 
+        transparent 7px 10px, 
+        #313534 10px calc(100% - 10px), 
+        transparent calc(100% - 10px) calc(100% - 7px), 
+        #7c8e8e calc(100% - 7px)
+    )
+    left / 1px 100%
+    no-repeat,
+    rgba(35, 35, 35, 1);
+}
+.trader-pic { /* contacts frame hovered */
+    --contacts-frame-hovered: 
+    linear-gradient(
+        90deg,
+        #7c8e8e 0px 7px, 
+        transparent 7px 10px, 
+        #313534 10px calc(100% - 10px), 
+        transparent calc(100% - 10px) calc(100% - 7px), 
+        #7c8e8e calc(100% - 7px)
+    )
+    top / 100% 1px
+    no-repeat,
+    linear-gradient(
+        #7c8e8e 0px 7px, 
+        transparent 7px 10px, 
+        #313534 10px calc(100% - 10px), 
+        transparent calc(100% - 10px) calc(100% - 7px), 
+        #7c8e8e calc(100% - 7px)
+    )
+    right / 1px 100%
+    no-repeat,
+    linear-gradient(
+        90deg,
+        #7c8e8e 0px 7px, 
+        transparent 7px 10px, 
+        #313534 10px calc(100% - 10px), 
+        transparent calc(100% - 10px) calc(100% - 7px), 
+        #7c8e8e calc(100% - 7px)
+    )
+    bottom / 100% 1px
+    no-repeat,
+    linear-gradient(
+        #7c8e8e 0px 7px, 
+        transparent 7px 10px, 
+        #313534 10px calc(100% - 10px), 
+        transparent calc(100% - 10px) calc(100% - 7px), 
+        #7c8e8e calc(100% - 7px)
+    )
+    left / 1px 100%
+    no-repeat,
+    rgba(35, 35, 35, 1);
+}
