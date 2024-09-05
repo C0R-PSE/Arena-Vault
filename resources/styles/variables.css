@@ -3,7 +3,9 @@ body { /* colors */
     --rare-color: #4d2e56;
     --gold-color: #6b4d1c;
     --legendary-color: #6d291e;
-    --text-color-greenish: #a0a9a6;
+    --text-color-white: #e9f4e9;
+    --text-color-light: #abb2ab;
+    --text-color-dark: #9ba4a1;
 }
 .trader-pic { /* contacts frame */
     --contacts-frame: 

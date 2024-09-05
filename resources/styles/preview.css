@@ -3,6 +3,7 @@
     flex-direction: column;
     width:650px;
     border: 2px solid #3a3a3a;
+    color: var(--text-color-dark);
     &[quality="common"] .preview-header:before{
         background-color: var(--common-color);
     }
@@ -23,6 +24,7 @@
     height: 45px;
     background-color: #121214;
     border-bottom: 1px solid #3a3a3a;
+    color: var(--text-color-white);
     align-items: flex-end;
     padding: 0 0 7px 13px;
     font-size: 21px;
@@ -70,9 +72,20 @@
 .preview-picture-area > .preview-data.category {
     top: 5px;
     left: 10px;
+    color: var(--text-color-light)
 }
 .preview-picture-area > .preview-data.size {
     top: 24px;
     left: 10px;
-    background-image: url('./icons/space-square.png');
+    /*background-image: url('./icons/space-square.png');*/
+  background-image:
+  linear-gradient(45deg, #808080 25%, transparent 25%), 
+  linear-gradient(-45deg, #808080 25%, transparent 25%),
+  linear-gradient(45deg, transparent 75%, #808080 75%),
+  linear-gradient(-45deg, transparent 75%, #808080 75%);
+
+  background-size:7px 7px;    
+  background-position:0 0, 10px 0, 10px -10px, 0px 10px;
+    /*background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;*/
 }
