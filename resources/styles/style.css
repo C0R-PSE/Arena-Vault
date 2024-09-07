@@ -388,6 +388,7 @@ input#search-field {
 }
 
 .tooltip {
+    pointer-events: none;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

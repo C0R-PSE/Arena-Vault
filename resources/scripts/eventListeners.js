@@ -97,3 +97,4 @@ export function addTooltip(elem, text, unchecked) {
   elem.addEventListener('mouseleave', (event) => { hideTooltip(event) })
 }
 addTooltip(document.querySelector('#sortOrderToggle'), 'Sort Order', true)
+tooltip.addEventListener('mouseover', () => {console.log('hovered tooltip')})
